@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedding with B2S</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>Too much pressure! 😤</h1>
+    <h2>not so much pressure</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit libero
+      perferendis possimus corporis, quae ratione a ipsum? Quo, nam! Quia,
+      tenetur? Voluptas velit ab, tempora quia quae ducimus numquam dolorem.
+    </p>
+
+    <div>
+        <fieldset id="first_row_of_buttons">
+            <legend>Filter the view!</legend>
+            <input type="Button" value="Oregon and Washington Only" id="oregon_and_washington">
+            <input type="button" value="Clear Filter" id="clear_filter">
+            <input type="button" value="Undo" id="undo">
+        </fieldset>
+        
+        <fieldset id="second_row_of_buttons">
+        <legend>Filter cities for a range of values!</legend>
+        <input type="number" placeholder="min value" id="minValue" />
+        <input type="number" placeholder="max value" id="maxValue" />
+        <input type="button" value="Filter Range" id="filter_range" />
+      </fieldset>
+    </div>
+
+    <div class="content">
+        <tableau-viz id="tableauViz"       
+  src='https://public.tableau.com/views/Superstore_embedded_800x800/Overview?:language=en-US&:display_count=n&:origin=viz_share_link' toolbar=""bottom" height="100vh" width="100vw">
+</tableau-viz>
+    </div>
+
+    <script
+      type="module"
+      src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+    ></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>
